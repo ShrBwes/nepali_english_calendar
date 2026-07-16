@@ -1,8 +1,8 @@
 name: nepali_english_calendar
 description: A highly customizable, beautiful calendar and date picker supporting both Bikram Sambat (BS) and Gregorian (AD) systems, with standard month grid and horizontal single-row scrollable views.
 version: 0.1.0
-homepage: https://github.com/beetech/nepali_english_calendar
-repository: https://github.com/beetech/nepali_english_calendar
+homepage: https://biweshstha.com.np
+repository: https://github.com/ShrBwes/nepali_english_calendar
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

@@ -10,24 +10,24 @@ A highly customizable, beautiful calendar and date picker package for Flutter th
     <td align="center"><b>English Calendar (AD)</b></td>
   </tr>
   <tr>
-    <td><img src="images/nepali_calendar.jpg" width="360"/></td>
-    <td><img src="images/english_calendar.jpg" width="360"/></td>
+    <td><img src="screenshots/nepali_calendar.jpg" width="360"/></td>
+    <td><img src="screenshots/english_calendar.jpg" width="360"/></td>
   </tr>
   <tr>
     <td align="center"><b>Horizontal Strip View</b></td>
     <td align="center"><b>Custom Badges & Styling</b></td>
   </tr>
   <tr>
-    <td><img src="images/horizontal_calendar.jpg" width="360"/></td>
-    <td><img src="images/custom_style_calendar.jpg" width="360"/></td>
+    <td><img src="screenshots/horizontal_calendar.jpg" width="360"/></td>
+    <td><img src="screenshots/custom_style_calendar.jpg" width="360"/></td>
   </tr>
   <tr>
     <td align="center"><b>Dialog Picker</b></td>
     <td align="center"><b>Bottom Sheet Picker</b></td>
   </tr>
   <tr>
-    <td><img src="images/dialog_calendar.jpg" width="360"/></td>
-    <td><img src="images/bottom_sheet_calendar.jpg" width="360"/></td>
+    <td><img src="screenshots/dialog_calendar.jpg" width="360"/></td>
+    <td><img src="screenshots/bottom_sheet_calendar.jpg" width="360"/></td>
   </tr>
 </table>
 
