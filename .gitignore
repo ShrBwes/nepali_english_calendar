@@ -1,0 +1,19 @@
+# Files and directories created by pub
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+
+# Built artifacts
+build/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS generated files
+.DS_Store
+Thumbs.db

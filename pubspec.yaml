@@ -1,0 +1,19 @@
+name: nepali_english_calendar
+description: A highly customizable, beautiful calendar and date picker supporting both Bikram Sambat (BS) and Gregorian (AD) systems, with standard month grid and horizontal single-row scrollable views.
+version: 0.1.0
+homepage: https://github.com/beetech/nepali_english_calendar
+repository: https://github.com/beetech/nepali_english_calendar
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  nepali_utils: ^3.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
