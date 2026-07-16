@@ -2,6 +2,35 @@
 
 A highly customizable, beautiful calendar and date picker package for Flutter that supports both Gregorian (AD) and Bikram Sambat (BS) calendar systems. It provides standard month grid view, horizontal single-row scrollable view, and dynamic AD/BS switching out of the box.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center"><b>Nepali Calendar (BS)</b></td>
+    <td align="center"><b>English Calendar (AD)</b></td>
+  </tr>
+  <tr>
+    <td><img src="images/nepali_calendar.jpg" width="360"/></td>
+    <td><img src="images/english_calendar.jpg" width="360"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Horizontal Strip View</b></td>
+    <td align="center"><b>Custom Badges & Styling</b></td>
+  </tr>
+  <tr>
+    <td><img src="images/horizontal_calendar.jpg" width="360"/></td>
+    <td><img src="images/custom_style_calendar.jpg" width="360"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Dialog Picker</b></td>
+    <td align="center"><b>Bottom Sheet Picker</b></td>
+  </tr>
+  <tr>
+    <td><img src="images/dialog_calendar.jpg" width="360"/></td>
+    <td><img src="images/bottom_sheet_calendar.jpg" width="360"/></td>
+  </tr>
+</table>
+
 ## Features
 
 - **Dual Calendar Systems**: Seamlessly toggle between English (AD) and Nepali (BS) calendars.
