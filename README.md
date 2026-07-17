@@ -31,6 +31,21 @@ A highly customizable, beautiful calendar and date picker package for Flutter th
   </tr>
 </table>
 
+---
+
+## Supported Platforms 📱
+
+| Platform | Supported | Details |
+|---|---|---|
+| **Android** | ✅ | Fully compatible |
+| **iOS** | ✅ | Fully compatible |
+| **Web** | ✅ | Fully compatible |
+| **macOS** | ✅ | Fully compatible |
+| **Windows** | ✅ | Fully compatible |
+| **Linux** | ✅ | Fully compatible |
+
+---
+
 ## Features
 
 - **Dual Calendar Systems**: Seamlessly toggle between English (AD) and Nepali (BS) calendars.
@@ -49,15 +64,34 @@ Add `nepali_english_calendar` to your `pubspec.yaml` dependencies:
 
 ```yaml
 dependencies:
-  flutter:
-    sdk: flutter
-  nepali_english_calendar:
-    path: path/to/package/nepali_english_calendar  # or using git/pub when published
+  nepali_english_calendar: ^0.0.1
 ```
 
-Run:
-```bash
-flutter pub get
+or run `flutter pub add nepali_english_calendar`. A single import exposes every widget, model, controller, and picker:
+
+```dart
+import 'package:nepali_english_calendar/nepali_english_calendar.dart';
+```
+
+---
+
+## Quick Start
+
+Instantly display a localized calendar inside your widget tree:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:nepali_english_calendar/nepali_english_calendar.dart';
+
+Widget build(BuildContext context) {
+  return CalendarWidget(
+    enableModeToggle: true, // lets users toggle between AD/BS modes
+    useNepaliScript: true,  // converts calendar digits/texts to Nepali script
+    onDateSelected: (date) {
+      print('Selected date: $date');
+    },
+  );
+}
 ```
 
 ---
