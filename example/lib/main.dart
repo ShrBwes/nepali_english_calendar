@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nepali_english_calendar/nepali_english_calendar.dart';
+import 'package:nepali_english_dual_calendar/nepali_english_dual_calendar.dart';
 
 void main() {
   runApp(const MyApp());

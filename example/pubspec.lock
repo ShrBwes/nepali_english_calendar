@@ -131,13 +131,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
-  nepali_english_calendar:
+  nepali_english_dual_calendar:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.0.1"
   nepali_utils:
     dependency: transitive
     description:

@@ -60,17 +60,17 @@ A highly customizable, beautiful calendar and date picker package for Flutter th
 
 ## Installation
 
-Add `nepali_english_calendar` to your `pubspec.yaml` dependencies:
+Add `nepali_english_dual_calendar` to your `pubspec.yaml` dependencies:
 
 ```yaml
 dependencies:
-  nepali_english_calendar: ^0.0.1
+  nepali_english_dual_calendar: ^0.0.1
 ```
 
-or run `flutter pub add nepali_english_calendar`. A single import exposes every widget, model, controller, and picker:
+or run `flutter pub add nepali_english_dual_calendar`. A single import exposes every widget, model, controller, and picker:
 
 ```dart
-import 'package:nepali_english_calendar/nepali_english_calendar.dart';
+import 'package:nepali_english_dual_calendar/nepali_english_dual_calendar.dart';
 ```
 
 ---
@@ -81,7 +81,7 @@ Instantly display a localized calendar inside your widget tree:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:nepali_english_calendar/nepali_english_calendar.dart';
+import 'package:nepali_english_dual_calendar/nepali_english_dual_calendar.dart';
 
 Widget build(BuildContext context) {
   return CalendarWidget(
@@ -104,7 +104,7 @@ To render a standard calendar in your app:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:nepali_english_calendar/nepali_english_calendar.dart';
+import 'package:nepali_english_dual_calendar/nepali_english_dual_calendar.dart';
 
 class CalendarScreen extends StatelessWidget {
   @override

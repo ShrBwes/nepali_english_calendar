@@ -1,4 +1,4 @@
-library nepali_english_calendar;
+library nepali_english_dual_calendar;
 
 export 'src/models/calendar_date.dart'
     show CalendarDate, CalendarMode, CalendarFormat, CalendarDayState;

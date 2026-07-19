@@ -1,6 +1,6 @@
-## 0.1.0
+## 0.0.1
 
-- Initial release of `nepali_english_calendar`.
+- Initial release of `nepali_english_dual_calendar`.
 - Added support for both Gregorian (AD) and Bikram Sambat (BS) calendar systems.
 - Implemented vertical month grid view page swiping and single-row horizontal scrollable calendar strip view.
 - Added fully custom developer builders for headers, weekdays, and day cells.
