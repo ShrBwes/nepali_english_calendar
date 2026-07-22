@@ -1,3 +1,5 @@
+/// A highly customizable, beautiful calendar and date picker package for Flutter
+/// supporting both Bikram Sambat (BS) and Gregorian (AD) calendar systems.
 library nepali_english_dual_calendar;
 
 export 'src/models/calendar_date.dart'

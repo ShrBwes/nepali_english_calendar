@@ -7,18 +7,40 @@ import 'default_builders.dart';
 import 'month_grid_view.dart';
 import 'horizontal_strip_view.dart';
 
+/// A customizable, responsive calendar widget supporting both Bikram Sambat (BS)
+/// and Gregorian (AD) calendar formats and modes.
 class CalendarWidget extends StatefulWidget {
+  /// An optional [CalendarController] to programmatically manage calendar state.
   final CalendarController? controller;
+
+  /// A custom builder to override the header display.
   final CalendarHeaderBuilder? headerBuilder;
+
+  /// A custom builder to override individual weekday label rendering.
   final CalendarWeekdayBuilder? weekdayBuilder;
+
+  /// A custom builder to override individual day cell rendering.
   final CalendarDayBuilder? dayBuilder;
+
+  /// Enables the built-in toggle button in the header to switch between AD and BS modes.
   final bool enableModeToggle;
+
+  /// Converts all Devanagari digits and labels into Nepali scripts (e.g. `१`, `२`).
   final bool useNepaliScript;
+
+  /// An optional font family parameter to apply to Devanagari text when using Nepali script.
   final String? nepaliFontFamily;
+
+  /// Displays the alternative calendar system's day number in the bottom right corner of each cell.
   final bool showAlternativeDate;
+
+  /// The internal padding around the calendar content.
   final EdgeInsetsGeometry padding;
+
+  /// The outer container box decoration.
   final BoxDecoration? decoration;
 
+  /// Creates a [CalendarWidget] instance.
   const CalendarWidget({
     super.key,
     this.controller,

@@ -1,6 +1,6 @@
 name: nepali_english_dual_calendar
-description: A highly customizable, beautiful calendar and date picker supporting both Bikram Sambat (BS) and Gregorian (AD) systems, with standard month grid and horizontal single-row scrollable views.
-version: 0.0.1
+description: A customizable Flutter calendar and picker supporting both Bikram Sambat (BS) and Gregorian (AD) systems.
+version: 0.0.2
 homepage: https://biweshstha.com.np
 repository: https://github.com/ShrBwes/nepali_english_calendar
 

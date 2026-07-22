@@ -2,15 +2,21 @@ import 'package:flutter/foundation.dart';
 import 'package:nepali_utils/nepali_utils.dart';
 import '../models/calendar_date.dart';
 
+/// A controller that manages selected date, focused month, calendar formats,
+/// and calendar display modes (Gregorian AD and Bikram Sambat BS).
 class CalendarController extends ChangeNotifier {
   CalendarDate _selectedDate;
   CalendarDate _focusedDate;
   CalendarMode _calendarMode;
   CalendarFormat _calendarFormat;
   
+  /// The earliest selectable date in the calendar.
   final CalendarDate firstDate;
+
+  /// The latest selectable date in the calendar.
   final CalendarDate lastDate;
 
+  /// Creates a [CalendarController] to manage the state of the calendar.
   CalendarController({
     CalendarDate? selectedDate,
     CalendarDate? focusedDate,
@@ -29,9 +35,16 @@ class CalendarController extends ChangeNotifier {
     _focusedDate = _normalize(_focusedDate).copyWithMode(_calendarMode);
   }
 
+  /// The currently selected date.
   CalendarDate get selectedDate => _selectedDate;
+
+  /// The date representing the currently focused month.
   CalendarDate get focusedDate => _focusedDate;
+
+  /// The current active calendar mode (AD or BS).
   CalendarMode get calendarMode => _calendarMode;
+
+  /// The current format of the calendar (standard grid or horizontal strip).
   CalendarFormat get calendarFormat => _calendarFormat;
 
   CalendarDate _normalize(CalendarDate date) {
@@ -48,6 +61,7 @@ class CalendarController extends ChangeNotifier {
     return date;
   }
 
+  /// Selects the given [date], normalized to the active calendar mode and start of day.
   void selectDate(CalendarDate date) {
     final normalized = _normalize(date).copyWithMode(_calendarMode);
     if (_selectedDate == normalized) return;
@@ -56,6 +70,7 @@ class CalendarController extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Sets the currently focused [date] (used to change the active month/view).
   void setFocusedDate(CalendarDate date) {
     final normalized = _normalize(date).copyWithMode(_calendarMode);
     if (_focusedDate == normalized) return;
@@ -63,10 +78,12 @@ class CalendarController extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Toggles between Bikram Sambat (BS) and Gregorian (AD) calendar modes.
   void toggleCalendarMode() {
     setCalendarMode(_calendarMode == CalendarMode.ad ? CalendarMode.bs : CalendarMode.ad);
   }
 
+  /// Programmatically sets the calendar mode to [mode] (AD or BS).
   void setCalendarMode(CalendarMode mode) {
     if (_calendarMode == mode) return;
     _calendarMode = mode;
@@ -75,12 +92,14 @@ class CalendarController extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Programmatically sets the calendar format to [format] (month grid or horizontal strip).
   void setCalendarFormat(CalendarFormat format) {
     if (_calendarFormat == format) return;
     _calendarFormat = format;
     notifyListeners();
   }
 
+  /// Jumps the calendar view focus to the next month, respecting bounds.
   void nextMonth() {
     if (_calendarMode == CalendarMode.ad) {
       final nextAd = DateTime(_focusedDate.ad.year, _focusedDate.ad.month + 1, 1);
@@ -102,6 +121,7 @@ class CalendarController extends ChangeNotifier {
     }
   }
 
+  /// Jumps the calendar view focus to the previous month, respecting bounds.
   void previousMonth() {
     if (_calendarMode == CalendarMode.ad) {
       final prevAd = DateTime(_focusedDate.ad.year, _focusedDate.ad.month - 1, 1);

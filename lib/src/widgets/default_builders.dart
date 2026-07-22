@@ -3,6 +3,8 @@ import 'package:nepali_utils/nepali_utils.dart';
 import '../controller/calendar_controller.dart';
 import '../models/calendar_date.dart';
 
+/// A helper class containing localization utility lookup arrays and formatting methods
+/// for Gregorian (AD) and Bikram Sambat (BS) calendar rendering.
 class CalendarHelper {
   static const List<String> adMonths = [
     'January',
@@ -94,6 +96,7 @@ class CalendarHelper {
     'Sat'
   ];
 
+  /// Converts an English digit string to Devanagari/Nepali digit characters.
   static String toNepaliDigits(String input) {
     const english = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     const nepali = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
@@ -104,6 +107,7 @@ class CalendarHelper {
     return result;
   }
 
+  /// Returns the localized month name based on the calendar mode and script preferences.
   static String getMonthName(CalendarDate date,
       {bool useNepaliScript = false}) {
     if (date.mode == CalendarMode.ad) {
@@ -115,6 +119,7 @@ class CalendarHelper {
     }
   }
 
+  /// Returns the formatted year string based on the calendar mode and script preferences.
   static String getYearString(CalendarDate date,
       {bool useNepaliScript = false}) {
     final yearStr = date.year.toString();
@@ -125,14 +130,27 @@ class CalendarHelper {
   }
 }
 
+/// The default header widget containing navigation arrows and the calendar mode switcher.
 class DefaultCalendarHeader extends StatelessWidget {
+  /// The currently focused month reference date.
   final CalendarDate focusedDate;
+
+  /// The active controller governing calendar state.
   final CalendarController controller;
+
+  /// Flag showing or hiding the AD/BS calendar mode toggle widget.
   final bool enableModeToggle;
+
+  /// Option enabling Devanagari digits/Nepali script formatting.
   final bool useNepaliScript;
+
+  /// Optional font family config to apply to Devanagari rendering.
   final String? nepaliFontFamily;
+
+  /// Option to show the alternate date in each day cell.
   final bool showAlternativeDate;
 
+  /// Creates a [DefaultCalendarHeader] instance.
   const DefaultCalendarHeader({
     super.key,
     required this.focusedDate,
@@ -293,11 +311,18 @@ class DefaultCalendarHeader extends StatelessWidget {
   }
 }
 
+/// The default weekday header label cell widget (e.g., Sun, Mon, etc.).
 class DefaultWeekdayHeader extends StatelessWidget {
+  /// The weekday text label.
   final String weekdayName;
+
+  /// Optional font family to apply for Nepali script representation.
   final String? nepaliFontFamily;
+
+  /// Option to translate the labels to Nepali script.
   final bool useNepaliScript;
 
+  /// Creates a [DefaultWeekdayHeader] instance.
   const DefaultWeekdayHeader({
     super.key,
     required this.weekdayName,
@@ -325,14 +350,27 @@ class DefaultWeekdayHeader extends StatelessWidget {
   }
 }
 
+/// The default widget rendering an individual day cell in the monthly grid.
 class DefaultDayCell extends StatelessWidget {
+  /// The specific calendar date associated with this cell.
   final CalendarDate date;
+
+  /// The visual highlight/disabled state of the day cell.
   final CalendarDayState state;
+
+  /// Option enabling Nepali Devanagari digit rendering.
   final bool useNepaliScript;
+
+  /// Optional custom font family for Devanagari digits.
   final String? nepaliFontFamily;
+
+  /// Callback callback when a user taps this day cell.
   final ValueChanged<CalendarDate>? onTap;
+
+  /// Option to display alternative calendar day index inside this day cell.
   final bool showAlternativeDate;
 
+  /// Creates a [DefaultDayCell] instance.
   const DefaultDayCell({
     super.key,
     required this.date,

@@ -1,3 +1,7 @@
+## 0.0.2
+
+- Shortened package description in `pubspec.yaml`.
+
 ## 0.0.1
 
 - Initial release of `nepali_english_dual_calendar`.
